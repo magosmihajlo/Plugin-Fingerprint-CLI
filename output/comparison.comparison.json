@@ -1,0 +1,9 @@
+{
+    "plugin1": "plugin-fingerprint-1.0.0",
+    "plugin2": "plugin-fingerprint-1.0.0",
+    "similarityScore": 1.0,
+    "addedClasses": [
+    ],
+    "removedClasses": [
+    ]
+}
