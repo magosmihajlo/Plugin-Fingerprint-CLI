@@ -24,6 +24,7 @@ dependencies {
     // Logging
     implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")
     implementation("ch.qos.logback:logback-classic:1.5.13")
+    implementation("org.slf4j:slf4j-api:2.0.9")
 
     // Bytecode Analysis
     implementation("org.ow2.asm:asm:9.6")

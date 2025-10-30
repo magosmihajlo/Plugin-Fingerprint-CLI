@@ -6,5 +6,6 @@ import kotlinx.serialization.Serializable
 data class Fingerprint(
     val pluginId: String,
     val structuralHash: String,
-    val features: Set<String>
+    val features: Set<String>,
+    val minHashSignature: MinHashSignature? = null
 )

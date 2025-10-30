@@ -4,16 +4,20 @@ import com.jetbrains.plugin.fingerprint.domain.model.Fingerprint
 import com.jetbrains.plugin.fingerprint.domain.model.PluginStructure
 import java.security.MessageDigest
 
-class FingerprintGenerator {
+class FingerprintGenerator(
+    private val minHashGenerator: MinHashGenerator = MinHashGenerator()
+) {
 
     fun generate(structure: PluginStructure): Fingerprint {
         val features = extractFeatures(structure)
         val hash = calculateStructuralHash(features)
+        val minHash = minHashGenerator.generate(features, structure.pluginId)
 
         return Fingerprint(
             pluginId = structure.pluginId,
             structuralHash = hash,
-            features = features
+            features = features,
+            minHashSignature = minHash
         )
     }
 

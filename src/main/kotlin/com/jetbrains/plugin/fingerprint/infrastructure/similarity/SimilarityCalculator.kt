@@ -3,8 +3,11 @@ package com.jetbrains.plugin.fingerprint.infrastructure.similarity
 import com.jetbrains.plugin.fingerprint.domain.model.ComparisonResult
 import com.jetbrains.plugin.fingerprint.domain.model.Fingerprint
 import com.jetbrains.plugin.fingerprint.domain.model.PluginStructure
+import com.jetbrains.plugin.fingerprint.infrastructure.fingerprint.MinHashGenerator
 
-class SimilarityCalculator {
+class SimilarityCalculator(
+    private val minHashGenerator: MinHashGenerator = MinHashGenerator()
+) {
 
     fun compare(
         structure1: PluginStructure,
@@ -13,10 +16,15 @@ class SimilarityCalculator {
         fingerprint2: Fingerprint
     ): ComparisonResult {
 
-        val similarity = calculateJaccardSimilarity(
-            fingerprint1.features,
-            fingerprint2.features
-        )
+        val similarity = if (fingerprint1.minHashSignature != null &&
+            fingerprint2.minHashSignature != null) {
+            minHashGenerator.estimateSimilarity(
+                fingerprint1.minHashSignature,
+                fingerprint2.minHashSignature
+            )
+        } else {
+            calculateJaccardSimilarity(fingerprint1.features, fingerprint2.features)
+        }
 
         val classes1 = structure1.classInfos.map { it.className }.toSet()
         val classes2 = structure2.classInfos.map { it.className }.toSet()

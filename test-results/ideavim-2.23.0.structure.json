@@ -1,0 +1,45 @@
+{
+    "pluginId": "IdeaVIM-2.23.0",
+    "fileEntries": [
+        {
+            "path": "IdeaVIM/lib/antlr4-runtime-4.13.2.jar",
+            "size": 326307,
+            "isDirectory": false,
+            "sha256Hash": null,
+            "fileType": "JAR"
+        },
+        {
+            "path": "IdeaVIM/lib/IdeaVIM-2.23.0.jar",
+            "size": 1352173,
+            "isDirectory": false,
+            "sha256Hash": null,
+            "fileType": "JAR"
+        },
+        {
+            "path": "IdeaVIM/lib/vim-engine-2.23.0.jar",
+            "size": 3192565,
+            "isDirectory": false,
+            "sha256Hash": null,
+            "fileType": "JAR"
+        },
+        {
+            "path": "IdeaVIM/lib/IdeaVIM-2.23.0-searchableOptions.jar",
+            "size": 695,
+            "isDirectory": false,
+            "sha256Hash": null,
+            "fileType": "JAR"
+        },
+        {
+            "path": "IdeaVIM/lib/src/IdeaVIM-2.23.0-sources.jar",
+            "size": 1525874,
+            "isDirectory": false,
+            "sha256Hash": null,
+            "fileType": "JAR"
+        }
+    ],
+    "classInfos": [
+    ],
+    "totalFiles": 5,
+    "totalClasses": 0,
+    "totalSize": 6397614
+}
