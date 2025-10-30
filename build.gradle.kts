@@ -27,9 +27,9 @@ dependencies {
     implementation("org.slf4j:slf4j-api:2.0.9")
 
     // Bytecode Analysis
-    implementation("org.ow2.asm:asm:9.6")
-    implementation("org.ow2.asm:asm-commons:9.6")
-    implementation("org.ow2.asm:asm-util:9.6")
+    implementation("org.ow2.asm:asm:9.9")
+    implementation("org.ow2.asm:asm-commons:9.9")
+    implementation("org.ow2.asm:asm-util:9.9")
 
     // Hashing
     implementation("com.google.guava:guava:32.1.3-jre")

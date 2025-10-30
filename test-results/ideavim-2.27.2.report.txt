@@ -3,11 +3,14 @@ PLUGIN ANALYSIS REPORT
 ================================================================================
 
 Plugin: IdeaVIM-2.27.2
-Total Files: 5
-Total Classes: 0
-Total Size: 6274 KB
+Total Files: 3431
+Total Classes: 2478
+Total Size: 22563 KB
 
-Structural Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-Total Features: 0
+Structural Hash: 1d3ad1c822e9fc870abf4678f774e5ca498bf03be9d797acaaf87cbe558a9c33
+Total Features: 31818
+
+MinHash Signatures: 128 hashes
+First 10 signatures: 111711, 146338, 62851, 77272, 216026, 76887, 105588, 11032, 113538, 6942
 
 ================================================================================

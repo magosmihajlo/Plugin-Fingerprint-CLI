@@ -1,0 +1,298 @@
+2025-10-30 13:52:26.951 [main] INFO  Main - Application started with args: analyze -i IdeaVIM-2.27.2.zip -o test-results/ideavim-2.27.2
+2025-10-30 13:52:27.294 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: IdeaVIM-2.27.2.zip, output: test-results/ideavim-2.27.2
+2025-10-30 13:52:27.310 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: IdeaVIM-2.27.2.zip
+2025-10-30 13:52:27.310 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: IdeaVIM-2.27.2.zip
+2025-10-30 13:52:27.311 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 8 entries
+2025-10-30 13:52:27.318 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 5 entries processed, 0 skipped
+2025-10-30 13:52:27.318 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 5 files in archive
+2025-10-30 13:52:27.319 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 0 classes, 0 XML files, 0 resources
+2025-10-30 13:52:27.319 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: IdeaVIM-2.27.2.zip
+2025-10-30 13:52:27.320 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 class files in archive
+2025-10-30 13:52:27.321 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 0 files extracted
+2025-10-30 13:52:27.321 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 0 class files for bytecode analysis
+2025-10-30 13:52:27.322 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 0 class files
+2025-10-30 13:52:27.322 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Successfully parsed 0 classes
+2025-10-30 13:52:27.322 [main] WARN  c.j.p.f.application.AnalyzeUseCase - No classes found in archive! This may not be a valid plugin.
+2025-10-30 13:52:27.325 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Using plugin ID: IdeaVIM-2.27.2
+2025-10-30 13:52:27.326 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Plugin structure created - 6425313 bytes total
+2025-10-30 13:52:27.330 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Generated fingerprint with 0 features
+2025-10-30 13:52:27.331 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Structural hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2025-10-30 13:52:27.331 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - MinHash signature generated with 128 hash functions
+2025-10-30 13:52:27.368 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Analysis complete! Output files:
+2025-10-30 13:52:27.369 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.structure.json
+2025-10-30 13:52:27.369 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.fingerprint.json
+2025-10-30 13:52:27.370 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.report.txt
+2025-10-30 13:52:27.372 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command completed successfully
+2025-10-30 13:52:42.730 [main] INFO  Main - Application started with args: analyze -i IdeaVIM-2.23.0.zip -o test-results/ideavim-2.23.0
+2025-10-30 13:52:43.023 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: IdeaVIM-2.23.0.zip, output: test-results/ideavim-2.23.0
+2025-10-30 13:52:43.037 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: IdeaVIM-2.23.0.zip
+2025-10-30 13:52:43.037 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: IdeaVIM-2.23.0.zip
+2025-10-30 13:52:43.038 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 8 entries
+2025-10-30 13:52:43.042 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 5 entries processed, 0 skipped
+2025-10-30 13:52:43.043 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 5 files in archive
+2025-10-30 13:52:43.043 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 0 classes, 0 XML files, 0 resources
+2025-10-30 13:52:43.044 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: IdeaVIM-2.23.0.zip
+2025-10-30 13:52:43.045 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 class files in archive
+2025-10-30 13:52:43.045 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 0 files extracted
+2025-10-30 13:52:43.045 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 0 class files for bytecode analysis
+2025-10-30 13:52:43.046 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 0 class files
+2025-10-30 13:52:43.046 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Successfully parsed 0 classes
+2025-10-30 13:52:43.046 [main] WARN  c.j.p.f.application.AnalyzeUseCase - No classes found in archive! This may not be a valid plugin.
+2025-10-30 13:52:43.049 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Using plugin ID: IdeaVIM-2.23.0
+2025-10-30 13:52:43.051 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Plugin structure created - 6397614 bytes total
+2025-10-30 13:52:43.056 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Generated fingerprint with 0 features
+2025-10-30 13:52:43.056 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Structural hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2025-10-30 13:52:43.056 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - MinHash signature generated with 128 hash functions
+2025-10-30 13:52:43.094 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Analysis complete! Output files:
+2025-10-30 13:52:43.095 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.structure.json
+2025-10-30 13:52:43.096 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.fingerprint.json
+2025-10-30 13:52:43.097 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.report.txt
+2025-10-30 13:52:43.100 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command completed successfully
+2025-10-30 13:52:48.282 [main] INFO  Main - Application started with args: compare --plugin1 test-results/ideavim-2.23.0.structure.json --plugin2 test-results/ideavim-2.27.2.structure.json --fp1 test-results/ideavim-2.23.0.fingerprint.json --fp2 test-results/ideavim-2.27.2.fingerprint.json -o test-results/version-comparison
+2025-10-30 13:52:48.571 [main] INFO  c.j.p.fingerprint.cli.CompareCommand - Compare command started
+2025-10-30 13:52:48.573 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Plugin 1: test-results/ideavim-2.23.0.structure.json, Fingerprint 1: test-results/ideavim-2.23.0.fingerprint.json
+2025-10-30 13:52:48.573 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Plugin 2: test-results/ideavim-2.27.2.structure.json, Fingerprint 2: test-results/ideavim-2.27.2.fingerprint.json
+2025-10-30 13:52:48.573 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Output: test-results/version-comparison
+2025-10-30 13:52:48.591 [main] INFO  c.j.p.f.application.CompareUseCase - Starting comparison of two plugins
+2025-10-30 13:52:48.592 [main] DEBUG c.j.p.f.application.CompareUseCase - Loading structure from: test-results/ideavim-2.23.0.structure.json
+2025-10-30 13:52:48.592 [main] DEBUG c.j.p.f.application.CompareUseCase - Loading structure from: test-results/ideavim-2.27.2.structure.json
+2025-10-30 13:52:48.640 [main] INFO  c.j.p.f.application.CompareUseCase - Comparing IdeaVIM-2.23.0 vs IdeaVIM-2.27.2
+2025-10-30 13:52:48.641 [main] DEBUG c.j.p.f.application.CompareUseCase - Plugin 1: 0 classes, 0 features
+2025-10-30 13:52:48.641 [main] DEBUG c.j.p.f.application.CompareUseCase - Plugin 2: 0 classes, 0 features
+2025-10-30 13:52:48.641 [main] DEBUG c.j.p.f.application.CompareUseCase - Using MinHash (fast) for similarity calculation
+2025-10-30 13:52:48.647 [main] INFO  c.j.p.f.application.CompareUseCase - Similarity score: 1.0
+2025-10-30 13:52:48.648 [main] INFO  c.j.p.f.application.CompareUseCase - Added classes: 0, Removed classes: 0
+2025-10-30 13:52:48.668 [main] INFO  c.j.p.f.application.CompareUseCase - Comparison complete! Output files:
+2025-10-30 13:52:48.671 [main] INFO  c.j.p.f.application.CompareUseCase -   - test-results/version-comparison.comparison.json
+2025-10-30 13:52:48.673 [main] INFO  c.j.p.f.application.CompareUseCase -   - test-results/version-comparison.comparison.txt
+2025-10-30 13:52:48.676 [main] INFO  c.j.p.fingerprint.cli.CompareCommand - Compare command completed successfully
+2025-10-30 13:52:54.623 [main] INFO  Main - Application started with args: analyze -i build/libs/plugin-fingerprint-1.0.0.jar -o test-results/self-analysis
+2025-10-30 13:52:54.945 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: build/libs/plugin-fingerprint-1.0.0.jar, output: test-results/self-analysis
+2025-10-30 13:52:54.959 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:52:54.959 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:52:54.968 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 10781 entries
+2025-10-30 13:52:56.014 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 10369 entries processed, 0 skipped
+2025-10-30 13:52:56.015 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 10369 files in archive
+2025-10-30 13:52:56.018 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 10271 classes, 9 XML files, 77 resources
+2025-10-30 13:52:56.018 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:52:56.028 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 10271 class files in archive
+2025-10-30 13:52:56.708 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 10271 files extracted
+2025-10-30 13:52:56.708 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 10271 class files for bytecode analysis
+2025-10-30 13:52:56.708 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 10271 class files
+2025-10-30 13:52:56.718 [main] ERROR c.j.p.f.i.parser.BytecodeParser - Failed to parse bytecode for class: com/jetbrains/plugin/fingerprint/application/AnalyzeUseCase.class
+java.lang.IllegalArgumentException: Unsupported class file major version 67
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:40)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClasses(BytecodeParser.kt:22)
+	at com.jetbrains.plugin.fingerprint.application.AnalyzeUseCase.execute(AnalyzeUseCase.kt:43)
+	at com.jetbrains.plugin.fingerprint.cli.AnalyzeCommand.run(Main.kt:33)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:306)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:319)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:40)
+	at com.github.ajalt.clikt.core.CliktCommand.parse(CliktCommand.kt:458)
+	at com.github.ajalt.clikt.core.CliktCommand.parse$default(CliktCommand.kt:455)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:482)
+	at com.jetbrains.plugin.fingerprint.cli.MainKt.main(Main.kt:90)
+2025-10-30 13:52:56.720 [main] ERROR c.j.p.fingerprint.cli.AnalyzeCommand - Analysis failed with domain exception
+com.jetbrains.plugin.fingerprint.domain.exception.PluginFingerprintException$BytecodeParsingException: Failed to parse bytecode for class: com/jetbrains/plugin/fingerprint/application/AnalyzeUseCase.class
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:60)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClasses(BytecodeParser.kt:22)
+	at com.jetbrains.plugin.fingerprint.application.AnalyzeUseCase.execute(AnalyzeUseCase.kt:43)
+	at com.jetbrains.plugin.fingerprint.cli.AnalyzeCommand.run(Main.kt:33)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:306)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:319)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:40)
+	at com.github.ajalt.clikt.core.CliktCommand.parse(CliktCommand.kt:458)
+	at com.github.ajalt.clikt.core.CliktCommand.parse$default(CliktCommand.kt:455)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:482)
+	at com.jetbrains.plugin.fingerprint.cli.MainKt.main(Main.kt:90)
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 67
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:40)
+	... 11 common frames omitted
+2025-10-30 13:57:04.866 [main] INFO  Main - Application started with args: analyze -i build/libs/plugin-fingerprint-1.0.0.jar -o test-results/self-analysis
+2025-10-30 13:57:05.155 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: build/libs/plugin-fingerprint-1.0.0.jar, output: test-results/self-analysis
+2025-10-30 13:57:05.176 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:57:05.176 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:57:05.202 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 10781 entries
+2025-10-30 13:57:06.222 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 10369 entries processed, 0 skipped
+2025-10-30 13:57:06.222 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 10369 files in archive
+2025-10-30 13:57:06.226 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 10271 classes, 9 XML files, 77 resources
+2025-10-30 13:57:06.226 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 13:57:06.234 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 10271 class files in archive
+2025-10-30 13:57:06.854 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 10271 files extracted
+2025-10-30 13:57:06.855 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 10271 class files for bytecode analysis
+2025-10-30 13:57:06.855 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 10271 class files
+2025-10-30 13:57:06.870 [main] ERROR c.j.p.f.i.parser.BytecodeParser - Failed to parse bytecode for class: com/jetbrains/plugin/fingerprint/application/AnalyzeUseCase.class
+java.lang.IllegalArgumentException: Unsupported class file major version 67
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:40)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClasses(BytecodeParser.kt:22)
+	at com.jetbrains.plugin.fingerprint.application.AnalyzeUseCase.execute(AnalyzeUseCase.kt:43)
+	at com.jetbrains.plugin.fingerprint.cli.AnalyzeCommand.run(Main.kt:33)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:306)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:319)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:40)
+	at com.github.ajalt.clikt.core.CliktCommand.parse(CliktCommand.kt:458)
+	at com.github.ajalt.clikt.core.CliktCommand.parse$default(CliktCommand.kt:455)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:482)
+	at com.jetbrains.plugin.fingerprint.cli.MainKt.main(Main.kt:90)
+2025-10-30 13:57:06.874 [main] ERROR c.j.p.fingerprint.cli.AnalyzeCommand - Analysis failed with domain exception
+com.jetbrains.plugin.fingerprint.domain.exception.PluginFingerprintException$BytecodeParsingException: Failed to parse bytecode for class: com/jetbrains/plugin/fingerprint/application/AnalyzeUseCase.class
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:60)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClasses(BytecodeParser.kt:22)
+	at com.jetbrains.plugin.fingerprint.application.AnalyzeUseCase.execute(AnalyzeUseCase.kt:43)
+	at com.jetbrains.plugin.fingerprint.cli.AnalyzeCommand.run(Main.kt:33)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:306)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:319)
+	at com.github.ajalt.clikt.parsers.Parser.parse(Parser.kt:40)
+	at com.github.ajalt.clikt.core.CliktCommand.parse(CliktCommand.kt:458)
+	at com.github.ajalt.clikt.core.CliktCommand.parse$default(CliktCommand.kt:455)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:475)
+	at com.github.ajalt.clikt.core.CliktCommand.main(CliktCommand.kt:482)
+	at com.jetbrains.plugin.fingerprint.cli.MainKt.main(Main.kt:90)
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 67
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:200)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+	at org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+	at com.jetbrains.plugin.fingerprint.infrastructure.parser.BytecodeParser.parseClass(BytecodeParser.kt:40)
+	... 11 common frames omitted
+2025-10-30 14:01:52.137 [main] INFO  Main - Application started with args: analyze -i IdeaVIM-2.27.2.zip -o test-results/ideavim-2.27.2
+2025-10-30 14:01:52.405 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: IdeaVIM-2.27.2.zip, output: test-results/ideavim-2.27.2
+2025-10-30 14:01:52.418 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: IdeaVIM-2.27.2.zip
+2025-10-30 14:01:52.418 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: IdeaVIM-2.27.2.zip
+2025-10-30 14:01:52.420 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 8 entries
+2025-10-30 14:01:52.423 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/vim-engine-2.27.2.jar, extracting contents
+2025-10-30 14:01:52.796 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 1635 entries from nested JAR: IdeaVIM/lib/vim-engine-2.27.2.jar
+2025-10-30 14:01:52.796 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2.jar, extracting contents
+2025-10-30 14:01:52.860 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 663 entries from nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2.jar
+2025-10-30 14:01:52.860 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar, extracting contents
+2025-10-30 14:01:52.875 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 218 entries from nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:01:52.875 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2-searchableOptions.jar, extracting contents
+2025-10-30 14:01:52.875 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 2 entries from nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2-searchableOptions.jar
+2025-10-30 14:01:52.875 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/src/IdeaVIM-2.27.2-sources.jar, extracting contents
+2025-10-30 14:01:52.929 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 908 entries from nested JAR: IdeaVIM/lib/src/IdeaVIM-2.27.2-sources.jar
+2025-10-30 14:01:52.930 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 3431 entries processed, 0 skipped
+2025-10-30 14:01:52.930 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 3431 files in archive
+2025-10-30 14:01:52.932 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 2478 classes, 9 XML files, 937 resources
+2025-10-30 14:01:52.932 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: IdeaVIM-2.27.2.zip
+2025-10-30 14:01:52.933 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/vim-engine-2.27.2.jar
+2025-10-30 14:01:53.043 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 1626 classes in nested JAR: IdeaVIM/lib/vim-engine-2.27.2.jar
+2025-10-30 14:01:53.043 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2.jar
+2025-10-30 14:01:53.088 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 637 classes in nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2.jar
+2025-10-30 14:01:53.089 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:01:53.100 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 215 classes in nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:01:53.101 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2-searchableOptions.jar
+2025-10-30 14:01:53.101 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 classes in nested JAR: IdeaVIM/lib/IdeaVIM-2.27.2-searchableOptions.jar
+2025-10-30 14:01:53.101 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/src/IdeaVIM-2.27.2-sources.jar
+2025-10-30 14:01:53.147 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 classes in nested JAR: IdeaVIM/lib/src/IdeaVIM-2.27.2-sources.jar
+2025-10-30 14:01:53.148 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 2478 files extracted
+2025-10-30 14:01:53.148 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 2478 class files for bytecode analysis
+2025-10-30 14:01:53.150 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 2478 class files
+2025-10-30 14:01:53.719 [main] INFO  c.j.p.f.i.parser.BytecodeParser - Successfully parsed 2478/2478 classes
+2025-10-30 14:01:53.721 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Successfully parsed 2478 classes
+2025-10-30 14:01:53.725 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Using plugin ID: IdeaVIM-2.27.2
+2025-10-30 14:01:53.730 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Plugin structure created - 23105379 bytes total
+2025-10-30 14:01:53.888 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Generated fingerprint with 31818 features
+2025-10-30 14:01:53.889 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Structural hash: 1d3ad1c822e9fc870abf4678f774e5ca498bf03be9d797acaaf87cbe558a9c33
+2025-10-30 14:01:53.890 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - MinHash signature generated with 128 hash functions
+2025-10-30 14:01:54.143 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Analysis complete! Output files:
+2025-10-30 14:01:54.144 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.structure.json
+2025-10-30 14:01:54.145 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.fingerprint.json
+2025-10-30 14:01:54.145 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.27.2.report.txt
+2025-10-30 14:01:54.147 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command completed successfully
+2025-10-30 14:02:05.189 [main] INFO  Main - Application started with args: analyze -i IdeaVIM-2.23.0.zip -o test-results/ideavim-2.23.0
+2025-10-30 14:02:05.463 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: IdeaVIM-2.23.0.zip, output: test-results/ideavim-2.23.0
+2025-10-30 14:02:05.474 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: IdeaVIM-2.23.0.zip
+2025-10-30 14:02:05.474 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: IdeaVIM-2.23.0.zip
+2025-10-30 14:02:05.475 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 8 entries
+2025-10-30 14:02:05.478 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar, extracting contents
+2025-10-30 14:02:05.579 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 218 entries from nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:02:05.580 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0.jar, extracting contents
+2025-10-30 14:02:05.738 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 656 entries from nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0.jar
+2025-10-30 14:02:05.738 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/vim-engine-2.23.0.jar, extracting contents
+2025-10-30 14:02:05.921 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 1634 entries from nested JAR: IdeaVIM/lib/vim-engine-2.23.0.jar
+2025-10-30 14:02:05.922 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0-searchableOptions.jar, extracting contents
+2025-10-30 14:02:05.922 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 2 entries from nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0-searchableOptions.jar
+2025-10-30 14:02:05.922 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found nested JAR: IdeaVIM/lib/src/IdeaVIM-2.23.0-sources.jar, extracting contents
+2025-10-30 14:02:05.969 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracted 902 entries from nested JAR: IdeaVIM/lib/src/IdeaVIM-2.23.0-sources.jar
+2025-10-30 14:02:05.970 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 3417 entries processed, 0 skipped
+2025-10-30 14:02:05.971 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 3417 files in archive
+2025-10-30 14:02:05.973 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 2474 classes, 9 XML files, 927 resources
+2025-10-30 14:02:05.973 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: IdeaVIM-2.23.0.zip
+2025-10-30 14:02:05.974 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:02:06.010 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 215 classes in nested JAR: IdeaVIM/lib/antlr4-runtime-4.13.2.jar
+2025-10-30 14:02:06.010 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0.jar
+2025-10-30 14:02:06.058 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 630 classes in nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0.jar
+2025-10-30 14:02:06.059 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/vim-engine-2.23.0.jar
+2025-10-30 14:02:06.168 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 1629 classes in nested JAR: IdeaVIM/lib/vim-engine-2.23.0.jar
+2025-10-30 14:02:06.171 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0-searchableOptions.jar
+2025-10-30 14:02:06.176 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 classes in nested JAR: IdeaVIM/lib/IdeaVIM-2.23.0-searchableOptions.jar
+2025-10-30 14:02:06.177 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting classes from nested JAR: IdeaVIM/lib/src/IdeaVIM-2.23.0-sources.jar
+2025-10-30 14:02:06.229 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Found 0 classes in nested JAR: IdeaVIM/lib/src/IdeaVIM-2.23.0-sources.jar
+2025-10-30 14:02:06.230 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 2474 files extracted
+2025-10-30 14:02:06.230 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 2474 class files for bytecode analysis
+2025-10-30 14:02:06.231 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 2474 class files
+2025-10-30 14:02:06.702 [main] INFO  c.j.p.f.i.parser.BytecodeParser - Successfully parsed 2474/2474 classes
+2025-10-30 14:02:06.703 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Successfully parsed 2474 classes
+2025-10-30 14:02:06.717 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Using plugin ID: IdeaVIM-2.23.0
+2025-10-30 14:02:06.727 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Plugin structure created - 22995937 bytes total
+2025-10-30 14:02:06.901 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Generated fingerprint with 31740 features
+2025-10-30 14:02:06.902 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Structural hash: 83ca304b188304cb84e9a1f3e5b0d6677902792a7fe9e9203caf9d6d4d597d02
+2025-10-30 14:02:06.902 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - MinHash signature generated with 128 hash functions
+2025-10-30 14:02:07.312 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Analysis complete! Output files:
+2025-10-30 14:02:07.313 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.structure.json
+2025-10-30 14:02:07.313 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.fingerprint.json
+2025-10-30 14:02:07.313 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/ideavim-2.23.0.report.txt
+2025-10-30 14:02:07.316 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command completed successfully
+2025-10-30 14:02:16.622 [main] INFO  Main - Application started with args: compare --plugin1 test-results/ideavim-2.23.0.structure.json --plugin2 test-results/ideavim-2.27.2.structure.json --fp1 test-results/ideavim-2.23.0.fingerprint.json --fp2 test-results/ideavim-2.27.2.fingerprint.json -o test-results/version-comparison
+2025-10-30 14:02:16.891 [main] INFO  c.j.p.fingerprint.cli.CompareCommand - Compare command started
+2025-10-30 14:02:16.892 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Plugin 1: test-results/ideavim-2.23.0.structure.json, Fingerprint 1: test-results/ideavim-2.23.0.fingerprint.json
+2025-10-30 14:02:16.892 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Plugin 2: test-results/ideavim-2.27.2.structure.json, Fingerprint 2: test-results/ideavim-2.27.2.fingerprint.json
+2025-10-30 14:02:16.892 [main] DEBUG c.j.p.fingerprint.cli.CompareCommand - Output: test-results/version-comparison
+2025-10-30 14:02:16.905 [main] INFO  c.j.p.f.application.CompareUseCase - Starting comparison of two plugins
+2025-10-30 14:02:16.905 [main] DEBUG c.j.p.f.application.CompareUseCase - Loading structure from: test-results/ideavim-2.23.0.structure.json
+2025-10-30 14:02:16.906 [main] DEBUG c.j.p.f.application.CompareUseCase - Loading structure from: test-results/ideavim-2.27.2.structure.json
+2025-10-30 14:02:17.390 [main] INFO  c.j.p.f.application.CompareUseCase - Comparing IdeaVIM-2.23.0 vs IdeaVIM-2.27.2
+2025-10-30 14:02:17.390 [main] DEBUG c.j.p.f.application.CompareUseCase - Plugin 1: 2474 classes, 31740 features
+2025-10-30 14:02:17.390 [main] DEBUG c.j.p.f.application.CompareUseCase - Plugin 2: 2478 classes, 31818 features
+2025-10-30 14:02:17.391 [main] DEBUG c.j.p.f.application.CompareUseCase - Using MinHash (fast) for similarity calculation
+2025-10-30 14:02:17.401 [main] INFO  c.j.p.f.application.CompareUseCase - Similarity score: 0.8359375
+2025-10-30 14:02:17.402 [main] INFO  c.j.p.f.application.CompareUseCase - Added classes: 31, Removed classes: 27
+2025-10-30 14:02:17.424 [main] INFO  c.j.p.f.application.CompareUseCase - Comparison complete! Output files:
+2025-10-30 14:02:17.426 [main] INFO  c.j.p.f.application.CompareUseCase -   - test-results/version-comparison.comparison.json
+2025-10-30 14:02:17.427 [main] INFO  c.j.p.f.application.CompareUseCase -   - test-results/version-comparison.comparison.txt
+2025-10-30 14:02:17.430 [main] INFO  c.j.p.fingerprint.cli.CompareCommand - Compare command completed successfully
+2025-10-30 14:02:26.799 [main] INFO  Main - Application started with args: analyze -i build/libs/plugin-fingerprint-1.0.0.jar -o test-results/self-analysis
+2025-10-30 14:02:27.090 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command started with input: build/libs/plugin-fingerprint-1.0.0.jar, output: test-results/self-analysis
+2025-10-30 14:02:27.107 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Starting analysis of plugin: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 14:02:27.108 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Starting archive parsing: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 14:02:27.119 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Archive contains 10781 entries
+2025-10-30 14:02:28.229 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Archive parsing complete: 10369 entries processed, 0 skipped
+2025-10-30 14:02:28.229 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Found 10369 files in archive
+2025-10-30 14:02:28.236 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - File types breakdown: 10271 classes, 9 XML files, 77 resources
+2025-10-30 14:02:28.236 [main] DEBUG c.j.p.f.i.parser.ArchiveParser - Extracting class files from: build/libs/plugin-fingerprint-1.0.0.jar
+2025-10-30 14:02:28.907 [main] INFO  c.j.p.f.i.parser.ArchiveParser - Class file extraction complete: 10271 files extracted
+2025-10-30 14:02:28.907 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Extracting 10271 class files for bytecode analysis
+2025-10-30 14:02:28.908 [main] DEBUG c.j.p.f.i.parser.BytecodeParser - Starting bytecode parsing for 10271 class files
+2025-10-30 14:02:30.020 [main] INFO  c.j.p.f.i.parser.BytecodeParser - Successfully parsed 10271/10271 classes
+2025-10-30 14:02:30.020 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Successfully parsed 10271 classes
+2025-10-30 14:02:30.030 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Using plugin ID: plugin-fingerprint-1.0.0
+2025-10-30 14:02:30.040 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Plugin structure created - 45242888 bytes total
+2025-10-30 14:02:30.541 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Generated fingerprint with 162767 features
+2025-10-30 14:02:30.541 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - Structural hash: dae61ffef577ef4aa883dbc104e6dfb3b62df4a3ce7383990b6e7981d1049988
+2025-10-30 14:02:30.541 [main] DEBUG c.j.p.f.application.AnalyzeUseCase - MinHash signature generated with 128 hash functions
+2025-10-30 14:02:31.490 [main] INFO  c.j.p.f.application.AnalyzeUseCase - Analysis complete! Output files:
+2025-10-30 14:02:31.491 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/self-analysis.structure.json
+2025-10-30 14:02:31.491 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/self-analysis.fingerprint.json
+2025-10-30 14:02:31.492 [main] INFO  c.j.p.f.application.AnalyzeUseCase -   - test-results/self-analysis.report.txt
+2025-10-30 14:02:31.495 [main] INFO  c.j.p.fingerprint.cli.AnalyzeCommand - Analyze command completed successfully

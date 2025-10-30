@@ -17,7 +17,8 @@ class BytecodeParser {
 
     fun parseClasses(classFiles: Map<String, ByteArray>): List<ClassInfo> {
         logger.debug("Starting bytecode parsing for {} class files", classFiles.size)
-        return classFiles.mapNotNull { (path, bytes) ->
+
+        val results = classFiles.mapNotNull { (path, bytes) ->
             try {
                 parseClass(bytes, path)
             } catch (e: Exception) {
@@ -31,14 +32,35 @@ class BytecodeParser {
                 }
             }
         }
+
+        logger.info("Successfully parsed {}/{} classes", results.size, classFiles.size)
+        if (results.size < classFiles.size) {
+            logger.warn("Failed to parse {} classes due to version/compatibility issues",
+                classFiles.size - results.size)
+        }
+
+        return results
     }
 
-    private fun parseClass(bytes: ByteArray, path: String = "unknown"): ClassInfo {
+    private fun parseClass(bytes: ByteArray, path: String = "unknown"): ClassInfo? {
         logger.trace("Parsing class: {}", path)
         try {
             val classNode = ClassNode()
             val reader = ClassReader(bytes)
-            reader.accept(classNode, ClassReader.SKIP_DEBUG)
+
+            // Try to parse - this is where version errors occur
+            try {
+                reader.accept(classNode, ClassReader.SKIP_DEBUG)
+            } catch (e: IllegalArgumentException) {
+                if (e.message?.contains("Unsupported class file major version") == true) {
+                    // Extract version from error message
+                    val version = e.message?.substringAfterLast("version ")?.toIntOrNull()
+                    logger.warn("Skipping class {} - compiled with newer Java version (bytecode version {}). " +
+                            "Update ASM library to parse this class.", path, version)
+                    return null
+                }
+                throw e
+            }
 
             val className = classNode.name.replace('/', '.')
             val packageName = className.substringBeforeLast('.', "")
@@ -55,6 +77,14 @@ class BytecodeParser {
                 isInterface = (classNode.access and Opcodes.ACC_INTERFACE) != 0,
                 isAbstract = (classNode.access and Opcodes.ACC_ABSTRACT) != 0
             )
+        } catch (e: IllegalArgumentException) {
+            // Catch any remaining version errors
+            if (e.message?.contains("Unsupported class file") == true) {
+                logger.warn("Skipping incompatible class: {} - {}", path, e.message)
+                return null
+            }
+            logger.error("Failed to parse bytecode for class: {}", path, e)
+            throw PluginFingerprintException.BytecodeParsingException(path, e)
         } catch (e: Exception) {
             logger.error("Failed to parse bytecode for class: {}", path, e)
             throw PluginFingerprintException.BytecodeParsingException(path, e)

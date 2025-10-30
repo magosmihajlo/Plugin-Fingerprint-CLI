@@ -3,11 +3,14 @@ PLUGIN ANALYSIS REPORT
 ================================================================================
 
 Plugin: plugin-fingerprint-1.0.0
-Total Files: 10357
-Total Classes: 10226
-Total Size: 44097 KB
+Total Files: 10369
+Total Classes: 10271
+Total Size: 44182 KB
 
-Structural Hash: b74f0e7cfd1cf0508234fc9733ea4f87c2152b558f0208ce4ef06e58313bfcb1
-Total Features: 162011
+Structural Hash: dae61ffef577ef4aa883dbc104e6dfb3b62df4a3ce7383990b6e7981d1049988
+Total Features: 162767
+
+MinHash Signatures: 128 hashes
+First 10 signatures: 32701, 22887, 6281, 13499, 4122, 18193, 54502, 4446, 24392, 1076
 
 ================================================================================

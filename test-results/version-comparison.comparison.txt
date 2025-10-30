@@ -5,10 +5,32 @@ COMPARISON REPORT
 Plugin 1: IdeaVIM-2.23.0
 Plugin 2: IdeaVIM-2.27.2
 
-Similarity: 100.00%
+Similarity: 83.59%
 
-Added Classes: 0
+Added Classes: 31
+  + com.maddyhome.idea.vim.action.change.insert.VisualInsertAction
+  + com.maddyhome.idea.vim.action.file.FileCloseAction
+  + com.maddyhome.idea.vim.api.VimVirtualFile
+  + com.maddyhome.idea.vim.common.DigraphSequence$DigraphState
+  + com.maddyhome.idea.vim.common.DigraphSequence$WhenMappings
+  + com.maddyhome.idea.vim.extension.nerdtree.AbstractDispatcher
+  + com.maddyhome.idea.vim.extension.nerdtree.AbstractDispatcher$Companion
+  + com.maddyhome.idea.vim.extension.nerdtree.Mappings
+  + com.maddyhome.idea.vim.extension.nerdtree.Mappings$Action
+  + com.maddyhome.idea.vim.extension.nerdtree.Mappings$Action$Companion
+  ... and 21 more
 
-Removed Classes: 0
+Removed Classes: 27
+  - com.maddyhome.idea.vim.KeyHandler$MutableBoolean
+  - com.maddyhome.idea.vim.action.change.insert.VisualBlockInsertAction
+  - com.maddyhome.idea.vim.api.VimCommandLine$Companion
+  - com.maddyhome.idea.vim.api.VirtualFile
+  - com.maddyhome.idea.vim.extension.nerdtree.NerdAction
+  - com.maddyhome.idea.vim.extension.nerdtree.NerdAction$Code
+  - com.maddyhome.idea.vim.extension.nerdtree.NerdAction$ToIj
+  - com.maddyhome.idea.vim.helper.EditorDataContext
+  - com.maddyhome.idea.vim.helper.EditorDataContext$Companion
+  - com.maddyhome.idea.vim.helper.RWLockLabel
+  ... and 17 more
 
 ================================================================================

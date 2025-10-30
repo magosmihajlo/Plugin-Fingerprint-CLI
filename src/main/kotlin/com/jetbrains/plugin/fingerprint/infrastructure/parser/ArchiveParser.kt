@@ -3,10 +3,12 @@ package com.jetbrains.plugin.fingerprint.infrastructure.parser
 import com.jetbrains.plugin.fingerprint.domain.exception.PluginFingerprintException
 import com.jetbrains.plugin.fingerprint.domain.model.FileEntry
 import org.slf4j.LoggerFactory
+import java.io.ByteArrayInputStream
 import java.io.File
 import java.security.MessageDigest
 import java.util.zip.ZipException
 import java.util.zip.ZipFile
+import java.util.zip.ZipInputStream
 
 class ArchiveParser {
     private val logger = LoggerFactory.getLogger(ArchiveParser::class.java)
@@ -53,6 +55,18 @@ class ArchiveParser {
                                 fileType = fileType
                             ))
 
+                            // NEW: If this is a JAR file, recursively extract its contents
+                            if (entry.name.endsWith(".jar")) {
+                                logger.debug("Found nested JAR: {}, extracting contents", entry.name)
+                                val nestedEntries = extractNestedJar(
+                                    zipFile.getInputStream(entry).readBytes(),
+                                    entry.name
+                                )
+                                entries.addAll(nestedEntries)
+                                logger.debug("Extracted {} entries from nested JAR: {}",
+                                    nestedEntries.size, entry.name)
+                            }
+
                             logger.trace("Processed entry: {} (type: {}, size: {} bytes)",
                                 entry.name, fileType, entry.size)
                         } catch (e: Exception) {
@@ -78,6 +92,41 @@ class ArchiveParser {
         return entries
     }
 
+    private fun extractNestedJar(jarBytes: ByteArray, parentPath: String): List<FileEntry> {
+        val entries = mutableListOf<FileEntry>()
+
+        try {
+            ZipInputStream(ByteArrayInputStream(jarBytes)).use { zis ->
+                var entry = zis.nextEntry
+                while (entry != null) {
+                    if (!entry.isDirectory) {
+                        val nestedPath = "$parentPath!/${entry.name}"
+                        val fileType = determineFileType(entry.name)
+
+                        // Read the bytes for this nested entry
+                        val bytes = zis.readBytes()
+                        val hash = if (shouldHash(fileType)) {
+                            calculateHash(bytes)
+                        } else null
+
+                        entries.add(FileEntry(
+                            path = nestedPath,
+                            size = entry.size.let { if (it == -1L) bytes.size.toLong() else it },
+                            isDirectory = false,
+                            sha256Hash = hash,
+                            fileType = fileType
+                        ))
+                    }
+                    entry = zis.nextEntry
+                }
+            }
+        } catch (e: Exception) {
+            logger.warn("Failed to extract nested JAR: {} - {}", parentPath, e.message)
+        }
+
+        return entries
+    }
+
     fun extractClassFiles(archivePath: String): Map<String, ByteArray> {
         logger.debug("Extracting class files from: {}", archivePath)
 
@@ -91,18 +140,24 @@ class ArchiveParser {
 
         try {
             ZipFile(file).use { zipFile ->
-                val classEntries = zipFile.entries().toList()
-                    .filter { !it.isDirectory && it.name.endsWith(".class") }
-
-                logger.debug("Found {} class files in archive", classEntries.size)
-
-                classEntries.forEach { entry ->
-                    try {
-                        classFiles[entry.name] = zipFile.getInputStream(entry).readBytes()
-                        logger.trace("Extracted class file: {}", entry.name)
-                    } catch (e: Exception) {
-                        logger.warn("Failed to extract class file: {} - {}",
-                            entry.name, e.message)
+                zipFile.entries().toList().forEach { entry ->
+                    if (!entry.isDirectory) {
+                        // Direct class files
+                        if (entry.name.endsWith(".class")) {
+                            classFiles[entry.name] = zipFile.getInputStream(entry).readBytes()
+                            logger.trace("Extracted class file: {}", entry.name)
+                        }
+                        // Nested JARs
+                        else if (entry.name.endsWith(".jar")) {
+                            logger.debug("Extracting classes from nested JAR: {}", entry.name)
+                            val nestedClasses = extractClassesFromJar(
+                                zipFile.getInputStream(entry).readBytes(),
+                                entry.name
+                            )
+                            classFiles.putAll(nestedClasses)
+                            logger.debug("Found {} classes in nested JAR: {}",
+                                nestedClasses.size, entry.name)
+                        }
                     }
                 }
             }
@@ -112,6 +167,28 @@ class ArchiveParser {
         }
 
         logger.info("Class file extraction complete: {} files extracted", classFiles.size)
+
+        return classFiles
+    }
+
+    private fun extractClassesFromJar(jarBytes: ByteArray, parentPath: String): Map<String, ByteArray> {
+        val classFiles = mutableMapOf<String, ByteArray>()
+
+        try {
+            ZipInputStream(ByteArrayInputStream(jarBytes)).use { zis ->
+                var entry = zis.nextEntry
+                while (entry != null) {
+                    if (!entry.isDirectory && entry.name.endsWith(".class")) {
+                        val nestedPath = "$parentPath!/${entry.name}"
+                        classFiles[nestedPath] = zis.readBytes()
+                    }
+                    entry = zis.nextEntry
+                }
+            }
+        } catch (e: Exception) {
+            logger.warn("Failed to extract classes from nested JAR: {} - {}",
+                parentPath, e.message)
+        }
 
         return classFiles
     }
