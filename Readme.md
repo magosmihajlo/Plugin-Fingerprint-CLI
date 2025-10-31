@@ -214,6 +214,11 @@ java -jar plugin-fingerprint.jar analyze \
   -o results/ideavim-2.27.2
 ```
 
+or
+```bash
+ java -jar build/libs/plugin-fingerprint-1.0.0.jar analyze -i IdeaVIM-2.27.2.zip -o test-results/ideavim-2.27.2   
+```
+
 **Outputs:**
 - `results/ideavim-2.27.2.structure.json` - Full plugin structure (files, classes, methods)
 - `results/ideavim-2.27.2.fingerprint.json` - MinHash signature + structural hash
@@ -266,6 +271,11 @@ java -jar plugin-fingerprint.jar compare \
   --fp2 results/ideavim-2.27.2.fingerprint.json \
   -o results/version-comparison
 ```
+
+or
+```bash
+ java -jar build/libs/plugin-fingerprint-1.0.0.jar compare --plugin1 test-results/ideavim-2.23.0.structure.json --plugin2 test-results/ideavim-2.27.2.structure.json --fp1 test-results/ideavim-2.23.0.fingerprint.json --fp2 test-results/ideavim-2.27.2.fingerprint.json -o test-results/version-comparison
+ ```
 
 **Outputs:**
 - `results/version-comparison.comparison.json` - Detailed comparison data
@@ -405,6 +415,12 @@ java -jar plugin-fingerprint.jar compare \
   -o results/comparison
 ```
 
+or
+```bash
+ java -jar build/libs/plugin-fingerprint-1.0.0.jar compare --plugin1 test-results/ideavim-2.23.0.structure.json --plugin2 test-results/ideavim-2.27.2.structure.json --fp1 test-results/ideavim-2.23.0.fingerprint.json --fp2 test-results/ideavim-2.27.2.fingerprint.json -o test-results/version-comparison
+```
+
+
 **Results:**
 ```
 IdeaVIM 2.23.0: 3417 files, 2474 classes, 31,740 features
@@ -531,7 +547,7 @@ java -cp "plugin-fingerprint.jar:lib/*" Main analyze ...  ❌ User needs depende
 ## 🔮 Future Enhancements
 
 ### Short-term (Production Readiness)
-- [ ] **Unit tests**: MinHash accuracy, bytecode parser edge cases
+- [ ] **(Added First Version) Unit tests**: MinHash accuracy, bytecode parser edge cases
 - [ ] **Integration tests**: Real plugin corpus (top 100 from a marketplace)
 - [ ] **Performance benchmarks**: Time/memory profiling for large plugins
 - [ ] **CI/CD pipeline**: Automated builds, releases, docker images
