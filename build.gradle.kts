@@ -36,9 +36,12 @@ dependencies {
 
     // Testing
     testImplementation(kotlin("test"))
-    testImplementation("io.kotest:kotest-runner-junit5:5.8.0")
-    testImplementation("io.kotest:kotest-assertions-core:5.8.0")
-    testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation("io.kotest:kotest-runner-junit5:6.0.4")
+    testImplementation("io.kotest:kotest-assertions-core:6.0.4")
+    testImplementation("io.mockk:mockk:1.14.6")
+
+    testImplementation("net.bytebuddy:byte-buddy:1.17.7")
+    testImplementation("net.bytebuddy:byte-buddy-agent:1.17.7")
 }
 
 application {

@@ -55,7 +55,6 @@ class ArchiveParser {
                                 fileType = fileType
                             ))
 
-                            // NEW: If this is a JAR file, recursively extract its contents
                             if (entry.name.endsWith(".jar")) {
                                 logger.debug("Found nested JAR: {}, extracting contents", entry.name)
                                 val nestedEntries = extractNestedJar(
@@ -103,7 +102,6 @@ class ArchiveParser {
                         val nestedPath = "$parentPath!/${entry.name}"
                         val fileType = determineFileType(entry.name)
 
-                        // Read the bytes for this nested entry
                         val bytes = zis.readBytes()
                         val hash = if (shouldHash(fileType)) {
                             calculateHash(bytes)
@@ -142,12 +140,10 @@ class ArchiveParser {
             ZipFile(file).use { zipFile ->
                 zipFile.entries().toList().forEach { entry ->
                     if (!entry.isDirectory) {
-                        // Direct class files
                         if (entry.name.endsWith(".class")) {
                             classFiles[entry.name] = zipFile.getInputStream(entry).readBytes()
                             logger.trace("Extracted class file: {}", entry.name)
                         }
-                        // Nested JARs
                         else if (entry.name.endsWith(".jar")) {
                             logger.debug("Extracting classes from nested JAR: {}", entry.name)
                             val nestedClasses = extractClassesFromJar(

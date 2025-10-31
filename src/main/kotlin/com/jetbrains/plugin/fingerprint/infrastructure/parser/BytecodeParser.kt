@@ -22,14 +22,9 @@ class BytecodeParser {
             try {
                 parseClass(bytes, path)
             } catch (e: Exception) {
-                when (e) {
-                    is PluginFingerprintException -> throw e
-                    else -> {
-                        logger.warn("Failed to parse class file: {} - {}", path, e.message)
-                        logger.debug("Parse error details for: {}", path, e)
-                        null
-                    }
-                }
+                logger.warn("Failed to parse class file: {} - {}", path, e.message)
+                logger.debug("Parse error details for: {}", path, e)
+                null
             }
         }
 
@@ -48,12 +43,10 @@ class BytecodeParser {
             val classNode = ClassNode()
             val reader = ClassReader(bytes)
 
-            // Try to parse - this is where version errors occur
             try {
                 reader.accept(classNode, ClassReader.SKIP_DEBUG)
             } catch (e: IllegalArgumentException) {
                 if (e.message?.contains("Unsupported class file major version") == true) {
-                    // Extract version from error message
                     val version = e.message?.substringAfterLast("version ")?.toIntOrNull()
                     logger.warn("Skipping class {} - compiled with newer Java version (bytecode version {}). " +
                             "Update ASM library to parse this class.", path, version)
@@ -78,7 +71,6 @@ class BytecodeParser {
                 isAbstract = (classNode.access and Opcodes.ACC_ABSTRACT) != 0
             )
         } catch (e: IllegalArgumentException) {
-            // Catch any remaining version errors
             if (e.message?.contains("Unsupported class file") == true) {
                 logger.warn("Skipping incompatible class: {} - {}", path, e.message)
                 return null
