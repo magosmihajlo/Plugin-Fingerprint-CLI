@@ -5,7 +5,6 @@
 A command-line tool that generates privacy-preserving "Code DNA" fingerprints from plugin binaries, enabling duplicate detection, version comparison, and code similarity analysis at scale.
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-blue.svg)](https://kotlinlang.org)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
@@ -585,12 +584,6 @@ java -cp "plugin-fingerprint.jar:lib/*" Main analyze ...  ❌ User needs depende
 - **Gradle Shadow Plugin**: Fat JAR generation ([GitHub](https://github.com/johnrengelman/shadow))
 - **Plugin Verifier**: JetBrains' official plugin validation tool ([GitHub](https://github.com/JetBrains/intellij-plugin-verifier))
 
-### Academic Papers
-- Broder, A. Z. (1997). "On the resemblance and containment of documents" - MinHash foundations
-- Rajaraman, A., & Ullman, J. D. (2011). "Mining of Massive Datasets" - LSH chapter
-
----
-
 ## 🤝 Contributing
 
 This project was developed as a screening task for a JetBrains internship. While it's primarily a portfolio piece, suggestions and feedback are welcome!
@@ -600,12 +593,6 @@ This project was developed as a screening task for a JetBrains internship. While
 - Performance optimizations
 - Support for other JVM languages (Scala, Groovy)
 - Documentation improvements
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details
 
 ---
 
